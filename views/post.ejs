@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+<h1> <%= singlePostTitle %> </h1>
+
+<p> <%= singlePostBody %> </p>
+<div class="btn-posts">
+  <form class="btn-posts" action="/delete" method="post">
+    <button class="btn btn-danger btn-lg" type="submit" name="deletePost" value="<%= singlePostTitle %>">Delete Post</button>
+  </form>
+
+  <button class="btn btn-success btn-lg" type="submit" name="button" onclick="location.href = '/';">Return Home</button>
+</div>
+
+
+<%- include('partials/footer'); -%>

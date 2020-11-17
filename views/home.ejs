@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+
+<p> <%= homeStartContent %> </p>
+
+<%# loop through the posts DB and display the results %>
+<% blogPosts.forEach(function(post){ %>
+  <h1> <%= post.title %> </h1>
+  <% if (post.content.length < 101) { %>
+    <p> <%= post.content.slice(0, post.content.length - 1) + " ..." %> <a href= "/posts/<%= post._id %>"> Read More </a> </p>
+  <% } else { %>
+    <p> <%= post.content.slice(0, 100) + " ..." %> <a href= "/posts/<%= post._id %>"> Read More </a> </p>
+  <% } %>
+<% }); %>
+
+<%- include('partials/footer'); -%>
