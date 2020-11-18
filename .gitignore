@@ -2,7 +2,6 @@
 npm-debug.log
 /*.env
 package-lock.json
-package.json
 Procfile
 
 
