@@ -1,6 +1,10 @@
 /node_modules
 npm-debug.log
 /*.env
+.package-lock.json
+.package.json
+.Procfile
+
 
 # General
 .DS_Store
